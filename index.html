@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NE2NE Site Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-symbol">
+                    <div class="infinity-symbol">
+                        <div class="circle left-circle">
+                            <span class="ne-text">NE</span>
+                        </div>
+                        <span class="number-2">2</span>
+                        <div class="circle right-circle">
+                            <span class="ne-text">NE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Site Monitor</h1>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="Enter website URL (e.g., google.com)" />
+                <button id="addBtn" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Site
+                </button>
+            </div>
+            <div class="action-buttons">
+                <button id="checkAllBtn" class="btn btn-secondary">
+                    <i class="fas fa-sync-alt"></i> Check All Sites
+                </button>
+                <button id="clearAllBtn" class="btn btn-danger">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalSites">0</div>
+                <div class="stat-label">Total Sites</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number online" id="onlineSites">0</div>
+                <div class="stat-label">Online</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number offline" id="offlineSites">0</div>
+                <div class="stat-label">Offline</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number unknown" id="unknownSites">0</div>
+                <div class="stat-label">Unknown</div>
+            </div>
+        </div>
+
+        <div class="websites-container">
+            <div id="websitesList" class="websites-list"></div>
+        </div>
+
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Checking websites...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
